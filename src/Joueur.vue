@@ -1,7 +1,9 @@
 <template>
   <div id="joueur">
     <h3>{{joueur.firstname}} {{joueur.lastname}} {{joueur.classement}}</h3>
+    <!-- permet de basculer entre voir ou pas voir l'input pour la modification -->
     <button v-on:click="showinput = ! showinput">Modifier</button>
+    <!-- permet de cacher le bouton si false -->
       <div v-if="showinput">
       <input type="text" v-model='joueur.firstname'>
       <input type="text" v-model='joueur.lastname'>
@@ -22,7 +24,8 @@ export default {
   },
   methods: {
       UpdateJoueur(joueur) {
-          this.$emit( "event_updatejoueur",joueur)
+        //on émet un evenement 
+        this.$emit( "event_updatejoueur",joueur)
       },
       deletejoueur(joueur) {
         this.$emit("event_deletejoueur", joueur)

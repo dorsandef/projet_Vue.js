@@ -12,6 +12,7 @@ import listevoitures from "./Listevoitures";
 import listejoueurs from "./Listejoueurs";
 export default {
   name: "effectif",
+  //objets
 components: {listevoitures, 
 listejoueurs}, 
   data() {
